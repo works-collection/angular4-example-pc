@@ -8,6 +8,14 @@ import { UserComponent } from './user/user.component';
 
 export const appRoutes = [
   {
+    path: 'auth',
+    loadChildren: './auth/auth.module#AuthModule'
+  },
+  {
+    path: 'menu',
+    loadChildren: './menu/menu.module#MenuModule'
+  },
+  {
     path: 'home',
     component: HomeComponent
   },

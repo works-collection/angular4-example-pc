@@ -17,7 +17,7 @@ import { UserComponent } from './user/user.component';
   imports: [
     BrowserModule,
     RouterModule,
-    RouterModule.forRoot(appRoutes,  { enableTracing: true })
+    RouterModule.forRoot(appRoutes,  { enableTracing: true }  )
   ],
   providers: [],
   bootstrap: [AppComponent]

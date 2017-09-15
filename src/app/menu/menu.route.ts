@@ -4,7 +4,7 @@ import { MenuComponent } from './menu.component';
 
 export const appRoutes = [
   {
-    path: 'menu',
+    path: '',
     component: MenuComponent
   }
 ];
