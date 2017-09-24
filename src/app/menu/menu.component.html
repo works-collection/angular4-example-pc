@@ -1,6 +1,10 @@
-<p appTest
-   [choice]="choice" [processed]="processed">
+<p appTest [choice]="choice" [processed]="processed">
   menu works!
 </p>
-<div #test  >我是测试</div>
+<div #choice  >我是测试</div>
 
+<div class="demo" data-flex="dir:right">
+  <div>{{ 2 | test:10 }}</div>
+  <div>2</div>
+  <div>3</div>
+</div>

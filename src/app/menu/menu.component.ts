@@ -3,10 +3,10 @@ import { Component, OnInit, ViewChildren, QueryList, ElementRef } from '@angular
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css']
+  styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent {
-  @ViewChildren('test', {read: ElementRef}) choice: QueryList<any>;
+  @ViewChildren('choice', {read: ElementRef}) choice: QueryList<any>;
   processed: any= false;
 
 
