@@ -20,7 +20,7 @@ export const appRoutes = [
     component: HomeComponent
   },
   {
-    path: 'user',
+    path: '',
     component: UserComponent
   }
 ];
