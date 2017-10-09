@@ -1,6 +1,7 @@
 import { TestBed, async } from '@angular/core/testing';
-
+import { Router } from '@angular/router';
 import { AppComponent } from './app.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -8,6 +9,7 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     }).compileComponents();
   }));
 
@@ -30,3 +32,6 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('h1').textContent).toContain('Welcome to app!');
   }));
 });
+class RouterStub {
+  navigateByUrl = jasmine.createSpy('navigateByUrl');
+}

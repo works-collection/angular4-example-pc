@@ -6,6 +6,7 @@ import { MenuComponent } from './menu.component';
 import { TestDirective } from './test.directive';
 import { TestPipe } from './test.pipe';
 import { appRoutes } from './menu.route';
+import { Test2Directive } from './test2.directive';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { appRoutes } from './menu.route';
   declarations: [
     MenuComponent,
     TestDirective,
-    TestPipe]
+    TestPipe,
+    Test2Directive]
 })
 export class MenuModule { }

@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChildren, QueryList, ElementRef } from '@angular/core';
+import { GoodsService } from '../common.server';
 
 @Component({
   selector: 'app-menu',
@@ -10,7 +11,14 @@ export class MenuComponent {
   processed: any= false;
 
 
-  constructor() { }
+  constructor(
+    private gooodSer: GoodsService
+  ) {
+    this.gooodSer.getGoodsList({searchText: 'lang=en'})
+      .subscribe(res => {
+        alert(res);
+      });
+  }
 
 
 

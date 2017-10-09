@@ -16,7 +16,7 @@ export class GoodsService {
                       }) {
     return this.http.request('http://localhost:8089/guest/api/lang_en.php', {
       method: 'get',
-      search: 'lang=en',
+      search: searchText,
       headers: new Headers({})
     })
       .map((res: Response) => {
