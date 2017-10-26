@@ -14,16 +14,6 @@ export class GoodsService {
                         page: number = 1,
                         type: string= 'get'
                       }) {
-    return this.http.request('http://localhost:8089/guest/api/lang_en.php', {
-      method: 'get',
-      search: searchText,
-      headers: new Headers({})
-    })
-      .map((res: Response) => {
-        return res.json();
-      })
-      .catch((error: any) =>
-        Observable.throw(error || 'Server error')
-      );
+    return Observable.of({});
   }
 }

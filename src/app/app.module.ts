@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 
 import { appRoutes } from './app.route';
@@ -17,6 +17,7 @@ import { UserComponent } from './user/user.component';
   imports: [
     BrowserModule,
     RouterModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes,  { enableTracing: false }  )
   ],
   providers: [],

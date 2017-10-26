@@ -1,4 +1,7 @@
-import { Directive, ElementRef, Input, OnChanges, DoCheck, QueryList, AfterViewInit, ChangeDetectorRef, Renderer2  } from '@angular/core';
+import {
+  Directive, ElementRef, Input, OnChanges, DoCheck, QueryList, AfterViewInit, ChangeDetectorRef, Renderer2,
+  ViewChild
+} from '@angular/core';
 
 @Directive({ selector: '[appTest]' })
 export class TestDirective implements AfterViewInit, OnChanges {
@@ -9,7 +12,7 @@ export class TestDirective implements AfterViewInit, OnChanges {
               private cdr: ChangeDetectorRef,
               private render: Renderer2
   ) {
-    el.nativeElement.style.backgroundColor = 'yellow';
+    el.nativeElement.style.backgroundColor = 'red';
   }
   ngOnChanges() {
     // this.processed = changes.processed.currentValue;
@@ -17,10 +20,10 @@ export class TestDirective implements AfterViewInit, OnChanges {
     // this.cdr.detectChanges();
   }
   ngAfterViewInit() {
-    console.log(this.choice);
+    // console.log(this.choice);
     this.render.addClass(this.choice, 'active');
     this.render.listen(document, 'click', (event) => {
-      alert();
+      // alert();
     });
   }
 
