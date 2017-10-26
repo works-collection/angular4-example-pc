@@ -1,18 +1,18 @@
 import {
   Directive, ElementRef, Input, OnChanges, DoCheck, QueryList, AfterViewInit, ChangeDetectorRef, Renderer2,
   ViewChild
-} from '@angular/core';
+} from "@angular/core";
 
-@Directive({ selector: '[appTest]' })
+@Directive({ selector: "[appTest]" })
 export class TestDirective implements AfterViewInit, OnChanges {
-  @Input('choice') choice: QueryList<any>;
-  @Input('processed') processed: boolean;
+  @Input("choice") choice: QueryList<any>;
+  @Input("processed") processed: boolean;
   choices: Array<{direction: string, offsetTop: number , offsetLeft: number}> = [];
   constructor(el: ElementRef,
               private cdr: ChangeDetectorRef,
               private render: Renderer2
   ) {
-    el.nativeElement.style.backgroundColor = 'red';
+    el.nativeElement.style.backgroundColor = "red";
   }
   ngOnChanges() {
     // this.processed = changes.processed.currentValue;
@@ -21,8 +21,8 @@ export class TestDirective implements AfterViewInit, OnChanges {
   }
   ngAfterViewInit() {
     // console.log(this.choice);
-    this.render.addClass(this.choice, 'active');
-    this.render.listen(document, 'click', (event) => {
+    this.render.addClass(this.choice, "active");
+    this.render.listen(document, "click", (event) => {
       // alert();
     });
   }

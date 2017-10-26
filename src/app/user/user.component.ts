@@ -1,9 +1,9 @@
-import { Component, OnInit, trigger, state, style, animate, transition, keyframes } from '@angular/core';
-import { SingalAnimate } from './animate';
+import { Component, OnInit, trigger, state, style, animate, transition, keyframes } from "@angular/core";
+import { SingalAnimate } from "./animate";
 @Component({
-  selector: 'app-user',
-  templateUrl: './user.component.html',
-  styleUrls: ['./user.component.css'],
+  selector: "app-user",
+  templateUrl: "./user.component.html",
+  styleUrls: ["./user.component.css"],
   animations: [SingalAnimate]
 })
 export class UserComponent implements OnInit {
@@ -14,10 +14,10 @@ export class UserComponent implements OnInit {
   }
 
   go() {
-    this.signal = 'go';
+    this.signal = "go";
   }
 
   stop() {
-    this.signal = 'stop';
+    this.signal = "stop";
   }
 }

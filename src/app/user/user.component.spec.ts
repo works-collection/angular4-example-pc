@@ -1,8 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { UserComponent } from './user.component';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { UserComponent } from "./user.component";
 
-describe('UserComponent', () => {
+describe("UserComponent", () => {
   let component: UserComponent;
   let fixture: ComponentFixture<UserComponent>;
 
@@ -22,7 +22,7 @@ describe('UserComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should be created', () => {
+  it("should be created", () => {
     expect(component).toBeTruthy();
   });
 });

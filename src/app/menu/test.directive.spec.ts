@@ -1,8 +1,8 @@
-import { Directive, ElementRef, Input, OnChanges, DoCheck, QueryList, AfterViewInit, ChangeDetectorRef, Renderer2  } from '@angular/core';
-import { Component, DebugElement } from '@angular/core';
-import { TestDirective } from './test.directive';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
+import { Directive, ElementRef, Input, OnChanges, DoCheck, QueryList, AfterViewInit, ChangeDetectorRef, Renderer2  } from "@angular/core";
+import { Component, DebugElement } from "@angular/core";
+import { TestDirective } from "./test.directive";
+import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { By } from "@angular/platform-browser";
 
 @Component({
   template: `<p appTest = false>
@@ -16,7 +16,7 @@ import { By } from '@angular/platform-browser';
 })
 class TestComponent { }
 
-describe('TestDirective', () => {
+describe("TestDirective", () => {
 
   let fixture: ComponentFixture<TestComponent>;
   let des: DebugElement;  // the three elements w/ the directive
@@ -30,10 +30,10 @@ describe('TestDirective', () => {
     fixture.detectChanges();
     des = fixture.debugElement.query(By.directive(TestDirective));
   });
-  it('should have one AppTest element', () => {
+  it("should have one AppTest element", () => {
     // const directive = new TestDirective(ElementRef, ChangeDetectorRef, Renderer2);
     // expect(directive).toBeTruthy();
     const bgColor = des.nativeElement.style.backgroundColor;
-    expect(bgColor).toBe('yellow');
+    expect(bgColor).toBe("yellow");
   });
 });

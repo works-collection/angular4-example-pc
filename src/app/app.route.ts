@@ -1,26 +1,26 @@
-import { RouterModule } from '@angular/router';
+import { RouterModule } from "@angular/router";
 
-import { AppComponent } from './app.component';
+import { AppComponent } from "./app.component";
 
-import { MenuComponent } from './menu/menu.component';
-import { HomeComponent } from './home/home.component';
-import { UserComponent } from './user/user.component';
+import { MenuComponent } from "./menu/menu.component";
+import { HomeComponent } from "./home/home.component";
+import { UserComponent } from "./user/user.component";
 
 export const appRoutes = [
   {
-    path: 'auth',
-    loadChildren: './auth/auth.module#AuthModule'
+    path: "auth",
+    loadChildren: "./auth/auth.module#AuthModule"
   },
   {
-    path: 'menu',
-    loadChildren: './menu/menu.module#MenuModule'
+    path: "menu",
+    loadChildren: "./menu/menu.module#MenuModule"
   },
   {
-    path: 'home',
+    path: "home",
     component: HomeComponent
   },
   {
-    path: '',
+    path: "",
     component: UserComponent
   }
 ];
