@@ -8,7 +8,7 @@ import {Observable} from "rxjs/Observable";
 import { TestDirective } from "./test.directive";
 import { TestPipe } from "./test.pipe";
 
-fdescribe("MenuComponent", () => {
+describe("MenuComponent", () => {
   let component: MenuComponent;
   let fixture: ComponentFixture<MenuComponent>;
   let goodsService: GoodsService;

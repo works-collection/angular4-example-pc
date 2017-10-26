@@ -7,7 +7,7 @@ import {
 export class TestDirective implements AfterViewInit, OnChanges {
   @Input("choice") choice: QueryList<any>;
   @Input("processed") processed: boolean;
-  choices: Array<{direction: string, offsetTop: number , offsetLeft: number}> = [];
+  // choices: Array<{direction: string, offsetTop: number , offsetLeft: number}> = [];
   constructor(el: ElementRef,
               private cdr: ChangeDetectorRef,
               private render: Renderer2

@@ -34,6 +34,6 @@ describe("TestDirective", () => {
     // const directive = new TestDirective(ElementRef, ChangeDetectorRef, Renderer2);
     // expect(directive).toBeTruthy();
     const bgColor = des.nativeElement.style.backgroundColor;
-    expect(bgColor).toBe("yellow");
+    expect(bgColor).toBe("red");
   });
 });
