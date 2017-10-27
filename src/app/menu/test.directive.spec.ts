@@ -5,9 +5,10 @@ import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { By } from "@angular/platform-browser";
 
 @Component({
-  template: `<p appTest = false>
+  template: `<p appTest [choice]="choice" [processed]="processed">
     menu works!
   </p>
+  <div #choice  >我是测试</div>
   <div class="demo" data-flex="dir:right">
     <div>2</div>
     <div>3</div>
