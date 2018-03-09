@@ -8,7 +8,7 @@ import { UserComponent } from "./user/user.component";
 
 export const appRoutes = [
   {
-    path: "auth",
+    path: "",
     loadChildren: "./auth/auth.module#AuthModule"
   },
   {
@@ -20,7 +20,7 @@ export const appRoutes = [
     component: HomeComponent
   },
   {
-    path: "",
+    path: "user",
     component: UserComponent
   }
 ];

@@ -1,6 +1,6 @@
 import {
   Directive, ElementRef, Input, OnChanges, DoCheck, QueryList, AfterViewInit, ChangeDetectorRef, Renderer2,
-  ViewChild
+  ViewChild, HostBinding
 } from "@angular/core";
 
 @Directive({ selector: "[appTest]" })
@@ -25,6 +25,10 @@ export class TestDirective implements AfterViewInit, OnChanges {
     this.render.listen(document, "click", (event) => {
       // alert();
     });
+  }
+
+  @HostBinding('class') get classes() {
+    return 'ikjkskd';
   }
 
   // ngDoCheck() {
